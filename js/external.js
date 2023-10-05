@@ -39,3 +39,5 @@ let facebookHourly = prompt('What is your hourly for facebook?');
 
 let weeklyPayment = parseInt(googleHourly) * parseInt(googleHours) + parseInt(amazonHourly) * parseInt(amazonHours) + parseInt(facebookHourly) * parseInt(facebookHours);
 alert(`You earned a total of ${weeklyPayment} dollars this week.`)
+
+
