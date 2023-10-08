@@ -31,25 +31,25 @@
 
 
 
-// const isCoding = (name) => {
-//     console.log(`${name} loves coding!`);
-// };
-//
-// isCoding('Nathan');
+const isCoding = (name) => {
+    console.log(`${name} loves coding!`);
+};
 
-// const sayHello = (name) => {
-//     return `Hello, ${name}`;
-// };
-//
-// const greeting = sayHello('nathan');
-//
-// console.log(greeting);
+isCoding('Nathan');
+
+const sayHello = (name) => {
+    return `Hello, ${name}`;
+};
+
+const greeting = sayHello('nathan');
+
+console.log(greeting);
 
 
-// const findTotalPrice = (numberDays, pricePer) => {
-//     var totalPrice = numberDays * pricePer;
-//     return totalPrice;
-// }
+const findTotalPrice = (numberDays, pricePer) => {
+    let totalPrice = numberDays * pricePer;
+    return totalPrice;
+}
 
 
 

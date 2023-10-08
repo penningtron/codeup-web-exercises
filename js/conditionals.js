@@ -179,11 +179,7 @@ const calculateTotal = (luckyNumber, totalAmount) => {
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-const isANumber = (number) => {
-    if (typeof number != "number") {
-        alert('That is not a number.');
-    }
-}
+
 const numberSign = (number) => {
     let sign = Math.sign(number);
     if(sign === 1) {
@@ -202,16 +198,25 @@ const evenOdd = (number) => {
     alert(`${number} is ${evenOrOdd}`);
     }
 
-let userConfirm = confirm("Would you like to enter a number?");
-let userNumber = parseFloat(prompt("Please enter a number"));
 
-if (userConfirm) {
+let userConfirm = confirm("Would you like to enter a number?"); // Nested if with a switch
+if (userConfirm === false) {
+    alert("Psh, bye.");
+} else {
+    let userNumber = parseFloat(prompt("Please enter a number"));
 
-    isANumber(userNumber);
-    evenOdd(userNumber);
-    numberPlusAHundo(userNumber);
-    numberSign(userNumber);
+    switch (isNaN(userNumber)) {
+        case true: alert(`That's not a number, silly.`);
+            break;
+        case false:
+            evenOdd(userNumber);
+            numberPlusAHundo(userNumber);
+            numberSign(userNumber);
+
 }
+}
+
+
 
 
 
