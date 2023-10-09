@@ -66,7 +66,7 @@ const isIdentical = (arg1, arg2) => {
 }
 
 const isEqual = (arg1, arg2) => {
-    if (arg1 === arg2) {
+    if (arg1 == arg2) {
         return true;
     } else {
         return false;
@@ -86,9 +86,12 @@ const concat = (arg1, arg2) => {
         return arg1 + arg2;
 
     } else if (typeof arg1 && typeof arg2 === "number"){
+        return (arg1.toString()+arg2.toString());
 
-        return (arg1.toString()+arg2.valueOf());
+    } else if (typeof arg1 && typeof arg2 === "boolean") {
+        return  (arg1.toString()+arg2.toString());
 
     }
 
 }
+
