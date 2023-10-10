@@ -183,19 +183,19 @@ const calculateTotal = (luckyNumber, totalAmount) => {
 const numberSign = (number) => {
     let sign = Math.sign(number);
     if(sign === 1) {
-        alert(`${number} is positive.`);
+        return(`${number} is positive.`);
     } else if (sign === -1){
-        alert(`${number} is negative.`);
-    } else if (sign === 0) {
-        alert(`${number} is zero.`);
+        return(`${number} is negative.`);
+    } else if (sign === 0){
+        return(`${number} is zero.`);
     }
 }
 const numberPlusAHundo = (number) => {
-    alert(`${number} plus 100 is ${number+100}`);
+    return(`${number} plus 100 is ${number+100}`);
 }
 const evenOdd = (number) => {
-    let evenOrOdd = number % 2 === 0 ? 'Even' : 'Odd'; // Ternary Operator Flex
-    alert(`${number} is ${evenOrOdd}`);
+    let evenOrOdd = number % 2 === 0 ? 'Even' : 'Odd'; // Ternary Operator
+    return(`${number} is ${evenOrOdd}`);
     }
 
 
@@ -209,9 +209,9 @@ if (userConfirm === false) {
         case true: alert(`That's not a number, silly.`);
             break;
         case false:
-            evenOdd(userNumber);
-            numberPlusAHundo(userNumber);
-            numberSign(userNumber);
+            alert(evenOdd(userNumber));
+            alert(numberPlusAHundo(userNumber));
+            alert(numberSign(userNumber));
 
 }
 }
