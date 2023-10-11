@@ -83,5 +83,15 @@ const second = (array) => {
 console.log(first(secondArray));
 
 
+// IIFE Immedialty Invoke Function Expression
+    (() => {
+        // START HERE
+        // Not for functions but what is happening
+    })();
+
+
+
+
+
 
 })();
