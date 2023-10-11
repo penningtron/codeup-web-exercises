@@ -1,67 +1,77 @@
 
 
-// const showMultiplicationTable =  (number) => {
-//     for (let i = 1; i <= 10; i++){
-//         let result = i * number;
-//
-//         console.log(`${number} * ${i} = ${result}`);
-//     }
-// }
-//
-// showMultiplicationTable(7);
+const showMultiplicationTable =  (number) => {
+    for (let i = 1; i <= 10; i++){
+        let result = i * number;
 
+        console.log(`${number} * ${i} = ${result}`);
+    }
+}
 
-//
-// for (let i = 1; i <= 10; i++){
-//     let randomNumber = Math.floor(Math.random() *200) +20;
-//     let isOddEven;
-//     if (randomNumber % 2 === 0 ){
-//         isOddEven= "even";
-//
-//     }else {
-//         isOddEven = "odd";
-//     }
-//     console.log(`${randomNumber} is ${isOddEven} `);
-// }
+showMultiplicationTable(7);
 
-
-
-// const buildRow = (num) => {
-//     let result = "";
-//     for(let i = 0; i < num; i++){
-//         result += num;
-//     }
-//     result += "\n";
-//     return result;
-// }
-//
-// const buildPyramid = (rows) => {
-//     let result = "";
-//     for(let i = 1; i < rows; i++){
-//         result += buildRow(i);
-//
-//     }
-//     return result;
-// }
-// let pyramid = buildPyramid(10);
-// console.log(pyramid);
+// Class walkthrough
 
 
 
 
-// for (let i = 0; i < 20; i++){
-//     let num = 100;
-//     console.log(num-i*5);
-// }
+
+for (let i = 1; i <= 10; i++){
+    let randomNumber = Math.floor(Math.random() *200) +20;
+    let isOddEven;
+    if (randomNumber % 2 === 0 ){
+        isOddEven= "even";
+
+    }else {
+        isOddEven = "odd";
+    }
+    console.log(`${randomNumber} is ${isOddEven} `);
+}
 
 
 
-// This is how you get a random number between 50 and 100
+const buildRow = (num) => {
+    let result = "";
+    for(let i = 0; i < num; i++){
+        result += num;
+    }
+    result += "\n";
+    return result;
+}
+
+const buildPyramid = (rows) => {
+    let result = "";
+    for(let i = 1; i < rows; i++){
+        result += buildRow(i);
+
+    }
+    return result;
+}
+let pyramid = buildPyramid(10);
+console.log(pyramid);
+
+// using a repeat
+
+const numberPyramid = (num) => {
+    for (let i = 1; i <= num; i++) {
+        const message = 1.toString().repeat(i);
+        console.log(message);
+
+        }
+    }
+}
 
 
-// This expression will generate a random number between 1 and 5
+for (let i = 0; i < 20; i++){
+    let num = 100;
+    console.log(num-i*5);
+}
 
-// The Cones
+
+
+
+
+
 let i = 1;
 let allCones = Math.floor(Math.random() * 50) + 50;
 
