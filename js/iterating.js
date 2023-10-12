@@ -40,11 +40,19 @@ console.log(names.length);
         console.log('The shape at index ' + i + ' is: ' + names[i]);
     }
 
+
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-names.forEach(names => console.log(`these are the names for ${names}`));
+
+    names.forEach((name) =>{
+
+        console.log(name);
+    })
+
+    names.forEach(names => console.log(`these are the names for ${names}`));
 
 
 
@@ -67,7 +75,7 @@ const secondArray = [1,2,3,4,5];
 const thirdArray = [1,2,3,4,5];
 
 
-const first = (array) => {
+const firstElement = (array) => {
     return array[0];
 }
 
@@ -77,7 +85,7 @@ const second = (array) => {
 
 
     const third = (array) => {
-        return array[2];
+        return array[4];
     }
 
 console.log(first(secondArray));
