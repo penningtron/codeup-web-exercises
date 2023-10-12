@@ -28,15 +28,41 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-
-
-
+// Part one
     let brReplace = planetsString.replaceAll("|","<br>");
     console.log(brReplace);
 
-    let liReplace = brReplace.replaceAll("<br>", "<li>");
-   let unorderedList = ("<ul>" + liReplace + "<ul>");
 
-   console.log(unorderedList);
+    // Bonus
+
+
+
+
+    let newArray = planetsString.split("|")
+
+for (let planet of newArray) {
+    newArray = ("<li>" + planet + "</li>");
+
+    console.log(typeof newArray);
+
+
+}
+    console.log(newArray);
+    newArray.unshift('<ul>');
+    newArray.push('</ul>');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 })();
