@@ -19,6 +19,9 @@
     console.log(person.lastName);
     console.log(person.firstName);
 
+    //You can also use bracket notation. You can use a variable to grab the elements
+    console.log(person["firstName"])
+
 
 
     /**
@@ -34,6 +37,10 @@
     person.sayHello = function () {
         return `Hey there ${person.firstName} ${person.lastName} `;
     }
+
+
+
+
     console.log(person.sayHello())
 
     /** TODO:
@@ -83,45 +90,15 @@ shoppers.forEach((shoppers) =>{
      */
 
     const books = [
-        {
-            title: "Green Eggs and Ham",
-            author: {
-                firstName: "dr.",
-                lastName: "suess"
-            }
-        },
-        {
-            title: "Harry Potter and the Goblet of Fire",
-            author: {
-                firstName: "J.K.",
-                lastName: "Rowling"
-            }
-        },
-        {
-            title: "Hatchet",
-            author: {
-                firstName: "Gary",
-                lastName: "Paulsen"
-            }
-        },
-        {
-            title: "Sapiens",
-            author: {
-                firstName: "yuval",
-                lastName: "harari"
-            }
-        },
-        {
-            title: "the magic of reality",
-            author: {
-                firstName: "richard",
-                lastName: "dawkins"
-            }
-        }
+
+        {title: 'To Kill a mockingbird', author: {firstName:'Harper', lastName:'Lee'},},
+        {title: 'The Magic of Reality', author: {firstName:'Richard', lastName:'Dawkins'},},
+        {title: 'Sapiens', author: {firstName:'Yuval', lastName:'Harari'},},
+        {title: 'Harry Potter', author: {firstName:'JK', lastName:'Rawling'},},
 
 ]
 
-console.log(books[0].author["firstName"]);
+console.log(books[0].author.firstName);
 
     /**
      * TODO:
@@ -149,7 +126,7 @@ console.log(books[0].author["firstName"]);
      */
     books.forEach((book) => {
         console.log("----------------------------------")
-        console.log(`Book #${books.indexOf(book)}`);
+        console.log(`Book #${books.indexOf(book)+1}`);
         console.log(`Title: ${book.title}`);
         console.log(`Author: ${book.author.firstName} ${book.author.lastName}`);
 
@@ -170,7 +147,7 @@ console.log(books[0].author["firstName"]);
 
 
 
-    let library = [];
+
     const createBook = (title,firstName,lastName) => {
 
         const book = {
@@ -185,7 +162,7 @@ console.log(books[0].author["firstName"]);
 
     }
 
-    console.log("Harry Potter", "JK", "Rowling");
+    console.log(createBook("Harry Potter", "JK", "Rowling"));
 
 
 })();
