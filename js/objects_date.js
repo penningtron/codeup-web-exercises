@@ -15,4 +15,4 @@ console.log(jsBirthday);
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#Getter
 console.log(`Here is my birthday using JavaScript: ${jsBirthday} ` );
 
-console.log('Here is my birthday', jsBirthday.getDate());
+console.log('Here is my birthday', jsBirthday.getMonth());
