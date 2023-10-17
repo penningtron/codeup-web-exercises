@@ -1,0 +1,22 @@
+
+body{
+
+    font-family: "monospace";
+    color: black;
+}
+h1 {
+    color: rebeccapurple;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+p {
+    font-style: italic;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+.article-background {
+    background: aquamarine;
+}
+
