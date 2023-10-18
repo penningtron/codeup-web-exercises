@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+}
+
+main{
+
+}
+
+p{
+    text-align: center;
+}
+
+
+ul , ol {
+    list-style: circle;
+    font-family: "lato", sans-serif;
+}
+
+td, th {
+    padding: 15px;
+}
+
+a:visited {
+    color: hotpink;
+
+}
+
+a:hover {
+    color: darkcyan;
+}
+
+section.mission{
+
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+
+
+
+}
+
+div.block{
+    width: inherit;
+    align-content: center;
+    justify-items: center;
+    padding: 20px;
+}
+div.bottom{
+    align-content: center;
+}
+
+
+table {
+    align-content: center;
+}
+
+
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
+
+h1 {
+    font-family: "lato";
+    font-size: 75px ;
+}
+
+h2,li {
+    text-decoration: underline;
+    color:black;
+    text-align: left;
+}
+ {}
+
+.img-rounded {
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    margin: 10px;
+    width: 500px;
+    box-shadow: 5px 5px 5px #888888;
+    transition: transform 0.2s;
+    object-fit: cover;
+}
+
+.enlarge-image{
+    transition: transform 0.2s;
+}
+
+.enlarge-image:hover{
+    transform: scale(1.2);
+}
