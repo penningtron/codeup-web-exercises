@@ -1,0 +1,21 @@
+
+
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
+
+.img-rounded {
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #888888;
+    transition: transform 0.2s;
+}
+
+.enlarge-image{
+    transition: transform 0.2s;
+}
+
+.enlarge-image:hover{
+    transform: scale(1.2);
+}

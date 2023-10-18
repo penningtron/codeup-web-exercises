@@ -66,7 +66,38 @@ const findLargestNumber = (arr) => {
     const numbers = [42,17,8,94,23,61,12,51,6];
     //call the function and display the result
     const result = findLargestNumber(numbers);
-    console.log(result);
+    //console.log(result);
 
 
 })();
+const calculateAverageGrade = (studentList) => {
+    let sum = 0;
+    for(let student of studentList){
+        sum += student.grade;
+    }
+
+    let classAverage = sum / studentList.length;
+
+    return classAverage;
+};
+
+const findTopStudent = (studentList) => {
+    let topStudent = studentList[0];
+    for(let student of studentList){
+        if (student.grade > topStudent.grade) {
+            topStudent = student;
+        }
+    }
+
+    return topStudent;
+}
+
+const students = [
+    { id: 1, name:"Alice",grade:90},
+    { id: 2, name:"Bob",grade:85},
+    { id: 3, name:"Charlie",grade:78},
+    { id: 4, name:"David",grade:92},
+    { id: 5, name:"Eva",grade:88},
+
+];
+
