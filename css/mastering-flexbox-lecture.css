@@ -2,7 +2,26 @@
 
 /* This is the file we will use to experiment with flexbox */
 .container {
+    display: flex;
+    min-height: 80dvh;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+
+}
+.item {
+    order: 4;
 }
 
-.item {
+#item:first-child {
+    order: 1;
+
+}
+
+.item:nth-child(2){
+    order: 2;
+}
+
+#item-10{
+    order: 3;
 }
