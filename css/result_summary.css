@@ -1,0 +1,42 @@
+.window{
+
+    background-image: linear-gradient(#5F5BA8, #4C55A5);
+
+
+    border-radius: 10px;
+
+    width: 500px;
+    height: 500px;
+
+}
+
+h1 {
+    ;
+}
+
+.reaction{
+    background-color: aliceblue;
+    border-radius: 8px;
+    border: #0f172a;
+    width: 200px;
+    height: 50px;
+}
+
+.stats{
+    height: 50px;
+    width: 200px;
+}
+
+button{
+    width: 200px;
+    height: 50px ;
+    border-radius: 20px;
+}
+
+.circle_number{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    background-color: #0f172a;
+    justify-content: center;
+}
