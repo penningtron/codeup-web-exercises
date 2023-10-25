@@ -46,3 +46,8 @@ input {
 .p_early_access_font{
     color: #ffffff;
 }
+
+@media  screen and (max-width: 780px) {
+
+
+}

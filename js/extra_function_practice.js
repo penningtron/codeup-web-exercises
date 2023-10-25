@@ -397,63 +397,125 @@ const convertHourToSec = (hours) => {
 
 //7. Write a function named getLowestNumber that takes in 3 arguments. If all 3 inputs are numbers or numeric strings, then return the lowest number. If any of the 3 inputs is missing or non-numeric, then return false.
 
-const getLowestNumber = (num1,num2,num3) => {
-    num1 = parseFloat(num1)
-    num2 = parseFloat(num2)
-    num3 = parseFloat(num3)
-
-    if (isNaN(num1) || isNaN(num2) || isNaN(num3)){
-        return false;
-    } else {
-        return (Math.min(num3,num2,num1))
-    }
-
-}
+// const getLowestNumber = (num1,num2,num3) => {
+//     num1 = parseFloat(num1)
+//     num2 = parseFloat(num2)
+//     num3 = parseFloat(num3)
+//
+//     if (isNaN(num1) || isNaN(num2) || isNaN(num3)){
+//         return false;
+//     } else {
+//         return (Math.min(num3,num2,num1))
+//     }
+//
+// }
 
 // 8. Write a function named addStringLengths that takes in two inputs. If both inputs provided are strings, addStringLengths returns the sum after adding the length (number of characters) of both strings. If either or both inputs are not strings, return false.
 
-const addStringLengths = (in1, in2) => {
-    if (typeof in2 !== "string" || typeof in1 !== "string"){
-        return false;
-    }
-    let length1 = in1.length;
-    let length2 = in2.length;
-
-    return length1 + length2;
-}
+// const addStringLengths = (in1, in2) => {
+//     if (typeof in2 !== "string" || typeof in1 !== "string"){
+//         return false;
+//     }
+//     let length1 = in1.length;
+//     let length2 = in2.length;
+//
+//     return length1 + length2;
+// }
 
 //9. Write a function named subtract that takes in two inputs. If both inputs provided are numeric or numeric strings, subtract will return the difference when the second input is subtracted from the first input. If one or both inputs is not numeric or numeric strings, subtract should return false.
 
-const subtract = (arg1, arg2 ) => {
-    let arg1Num = parseInt(arg1);
-    let arg2Num = parseInt(arg2);
-    if (isNaN(arg1Num) || isNaN(arg2Num)){
-        return false;
-    }
-
-    return arg1Num - arg2Num;
-}
+// const subtract = (arg1, arg2 ) => {
+//     let arg1Num = parseInt(arg1);
+//     let arg2Num = parseInt(arg2);
+//     if (isNaN(arg1Num) || isNaN(arg2Num)){
+//         return false;
+//     }
+//
+//     return arg1Num - arg2Num;
+// }
 
 //10. Write a function named calculateChange that takes in two inputs, totalPaid and totalCost. If both inputs are numeric or numeric strings, calculateChange should return the change after subtracting the cost from the amount paid. The return should be in $x.xx format as a string Note: it should return with two decial places. If either or both inputs are not numeric or numeric strings, calculateChange should return false.
 
-const calculateChange = (totalPaid,totalCost ) => {
+// const calculateChange = (totalPaid,totalCost ) => {
+//
+//     let paidNum = parseFloat(totalPaid);
+//     let costNum = parseFloat(totalCost);
+//     if (isNaN(paidNum) || isNaN(costNum)){
+//         return false;
+//     }
+//
+//     let subracted = paidNum - costNum;
+//     const formatter = new Intl.NumberFormat(`en-US`,{
+//         style:'currency',
+//         currency:'USD',
+//     });
+//
+//     return formatter.format(subracted);
+//
+//
+// }
 
-    let paidNum = parseFloat(totalPaid);
-    let costNum = parseFloat(totalCost);
-    if (isNaN(paidNum) || isNaN(costNum)){
-        return false;
+// const findLongestWord = (sentence) => {
+//     if (typeof sentence !== "string"){
+//         return false;
+//     }
+//     let punctuation = ".";
+//     let cleanString = sentence.replace(punctuation,"").toLowerCase();
+//     let words = cleanString.split(" ");
+//     console.log(words);
+//
+//     let sorted = words.sort((a, b) => a.length - b.length);
+//     console.log(sorted)
+//     console.log( sorted.slice(-1));
+//
+// }
+//
+//
+//
+//
+//
+// findLongestWord("Here is a sentence of some words to find! the longest.")
+
+
+const names = [
+    "Alice",
+    "Bob",
+    "Charlie",
+    "David",
+    "Ella",
+    "Frank",
+    "Grace",
+    "Henry",
+    "Ivy",
+    "Jack",
+    "Katherine",
+    "Liam",
+    "Mia",
+    "Noah",
+    "Olivia"
+];
+
+
+
+const shuffleArray = (arr) => {
+    // Shuffle
+    let currentIndex = arr.length, randomIndex;
+    while (currentIndex > 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [arr[currentIndex], arr[randomIndex]] = [
+            arr[randomIndex], arr[currentIndex]];
     }
-
-    let subracted = paidNum - costNum;
-    const formatter = new Intl.NumberFormat(`en-US`,{
-        style:'currency',
-        currency:'USD',
-    });
-
-    return formatter.format(subracted);
-
-
+    return arr;
 }
+
+
+
+
+console.log(shuffleArray(names));
+
+
+
 
 
 

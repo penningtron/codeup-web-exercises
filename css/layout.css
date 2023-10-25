@@ -35,7 +35,7 @@
     display: flex;
     width: 100%;
     max-width: 1100px;
-    padding: 0 20px;
+    padding: 0 0px;
 }
 .row.full-width {
     max-width: unset;
@@ -185,9 +185,9 @@
     padding-bottom: 30px;
 }
 
-.py-50 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+.py-70 {
+    padding-top: 70px;
+    padding-bottom:70px;
 }
 
 .py-200 {
