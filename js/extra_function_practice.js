@@ -258,52 +258,52 @@ const add = (num1, num2) => {
 
 
 
-const anagramChecker = (string1, string2) => {
-    if (typeof string1 && typeof string2 !== "string"){
-        return false;
-    }
-    if (string1.length !== string2.length){
-        return false;
-    }
-
-    let arrString1 = string1.split("");
-    let arrString2 = string2.split("");
-
-    let sorted1 = arrString1.sort();
-    let sorted2 = arrString2.sort();
-
-    let alphaArr1 = sorted1.join();
-    let alphaArr2 = sorted2.join();
-
-    if (alphaArr2 === alphaArr1){
-        console.log( ` the string ${string1} and ${sorted2} are anagrams.`);
-    } else {
-        console.log( ` the string ${string1} and ${sorted2} are NOT anagrams.`);
-    }
-}
-anagramChecker("cat", "ctb");
+// const anagramChecker = (string1, string2) => {
+//     if (typeof string1 && typeof string2 !== "string"){
+//         return false;
+//     }
+//     if (string1.length !== string2.length){
+//         return false;
+//     }
+//
+//     let arrString1 = string1.split("");
+//     let arrString2 = string2.split("");
+//
+//     let sorted1 = arrString1.sort();
+//     let sorted2 = arrString2.sort();
+//
+//     let alphaArr1 = sorted1.join();
+//     let alphaArr2 = sorted2.join();
+//
+//     if (alphaArr2 === alphaArr1){
+//         console.log( ` the string ${string1} and ${sorted2} are anagrams.`);
+//     } else {
+//         console.log( ` the string ${string1} and ${sorted2} are NOT anagrams.`);
+//     }
+// }
+// anagramChecker("cat", "ctb");
 
 
 
 // Array Intersection: Write a function that takes two arrays as input and returns an array containing elements that are present in both input arrays.
 
 
-let newArr = [];
-const arrIntersect = (arr1, arr2) => {
-    for (let i of arr1) {
-        if (arr2.includes(i)){
-            newArr.push(i)
-        } else {
-            console.log(`${i} is not a common element.`)
-        }
-    }
-    console.log(`the new array with common elements is ${newArr}`);
-}
-
-let testArr1 = [1,2,3,4,5];
-let testArr2 = [5,8,6,3,9];
-
-arrIntersect(testArr1,testArr2)
+// let newArr = [];
+// const arrIntersect = (arr1, arr2) => {
+//     for (let i of arr1) {
+//         if (arr2.includes(i)){
+//             newArr.push(i)
+//         } else {
+//             console.log(`${i} is not a common element.`)
+//         }
+//     }
+//     console.log(`the new array with common elements is ${newArr}`);
+// }
+//
+// let testArr1 = [1,2,3,4,5];
+// let testArr2 = [5,8,6,3,9];
+//
+// arrIntersect(testArr1,testArr2)
 
 
 
@@ -311,89 +311,89 @@ arrIntersect(testArr1,testArr2)
 
 //1. Define a function named lowerCase that takes in an input and returns that input as a string in all lower case letters. Returns false if the input passed is not a string.
 
-const lowerCase = (input)=>{
-    if(typeof input !== "string"){
-        return false;
-    } else {
-        return input.toLowerCase();
-    }
-
-}
+// const lowerCase = (input)=>{
+//     if(typeof input !== "string"){
+//         return false;
+//     } else {
+//         return input.toLowerCase();
+//     }
+//
+// }
 
 //2. Define a function named isAllLowerCase that takes in a string and returns true if all characters in the string are lowercase otherwise it should return false.
 
-const isAllLowerCase = (input) =>{
-    if (typeof input !== "string"){
-        return false;
-    }
-    if (input === input.toLowerCase()){
-        return true;
-    } else {
-        return false;
-    }
-}
+// const isAllLowerCase = (input) =>{
+//     if (typeof input !== "string"){
+//         return false;
+//     }
+//     if (input === input.toLowerCase()){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
 //3. Define a function named isAllUpperCase that takes in a string and returns true if all characters in the string are uppercase otherwise it should return false.
 
-const isAllUpperCase = (input) =>{
-    if (typeof input !== "string"){
-        return false;
-    }
-    if (input === input.toUpperCase()){
-        return true;
-    } else {
-        return false;
-    }
-}
+// const isAllUpperCase = (input) =>{
+//     if (typeof input !== "string"){
+//         return false;
+//     }
+//     if (input === input.toUpperCase()){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
 //4. Define a function named isNotPalindrome that takes in a string and returns true if that string is not palindrome, if the string is palindrome should return false.
 
-const isNotPalindrome = (input) => {
-
-    if (typeof input !== "string"){
-        return true;
-    }
-    let inputArr = input.split("");
-    let inputArrReverse = inputArr.reverse();
-    let inputReversed = inputArrReverse.join("");
-    if ( input.toLowerCase() === inputReversed.toLowerCase()){
-        return false;
-    } else {
-        return true;
-    }
-
-
-}
+// const isNotPalindrome = (input) => {
+//
+//     if (typeof input !== "string"){
+//         return true;
+//     }
+//     let inputArr = input.split("");
+//     let inputArrReverse = inputArr.reverse();
+//     let inputReversed = inputArrReverse.join("");
+//     if ( input.toLowerCase() === inputReversed.toLowerCase()){
+//         return false;
+//     } else {
+//         return true;
+//     }
+//
+//
+// }
 
 //5. Define a function named multiplyBy2 that takes in an input and multiplies it by 2 if the input is numeric. If the input is Not A Number, then return false.
 
-const multiplyBy2 = (input) => {
-
-    if (typeof input !== "number" && typeof input !== "string"){
-        return false;
-    }
-    let makeNumeric = parseInt(input);
-    if (isNaN(makeNumeric)){
-        return false;
-    }
-
-    return makeNumeric * 2;
-}
+// const multiplyBy2 = (input) => {
+//
+//     if (typeof input !== "number" && typeof input !== "string"){
+//         return false;
+//     }
+//     let makeNumeric = parseInt(input);
+//     if (isNaN(makeNumeric)){
+//         return false;
+//     }
+//
+//     return makeNumeric * 2;
+// }
 
 //6. Define a function named convertHourToSec that takes in one input Hours. Return the conversation of the number of hours into total seconds. If the input is not numeric or a numeric string, convertHourToSec, should return false.
 
-const convertHourToSec = (hours) => {
-
-    let makeNumeric = parseInt(hours);
-    if (isNaN(makeNumeric) || makeNumeric < 0){
-        return false;
-    } else {
-        return makeNumeric * 3600;
-
-    }
-
-
-}
+// const convertHourToSec = (hours) => {
+//
+//     let makeNumeric = parseInt(hours);
+//     if (isNaN(makeNumeric) || makeNumeric < 0){
+//         return false;
+//     } else {
+//         return makeNumeric * 3600;
+//
+//     }
+//
+//
+// }
 
 //7. Write a function named getLowestNumber that takes in 3 arguments. If all 3 inputs are numbers or numeric strings, then return the lowest number. If any of the 3 inputs is missing or non-numeric, then return false.
 
@@ -477,42 +477,81 @@ const convertHourToSec = (hours) => {
 // findLongestWord("Here is a sentence of some words to find! the longest.")
 
 
-const names = [
-    "Alice",
-    "Bob",
-    "Charlie",
-    "David",
-    "Ella",
-    "Frank",
-    "Grace",
-    "Henry",
-    "Ivy",
-    "Jack",
-    "Katherine",
-    "Liam",
-    "Mia",
-    "Noah",
-    "Olivia"
-];
+// const names = [
+//     "Alice",
+//     "Bob",
+//     "Charlie",
+//     "David",
+//     "Ella",
+//     "Frank",
+//     "Grace",
+//     "Henry",
+//     "Ivy",
+//     "Jack",
+//     "Katherine",
+//     "Liam",
+//     "Mia",
+//     "Noah",
+//     "Olivia"
+// ];
 
 
 
-const shuffleArray = (arr) => {
-    // Shuffle
-    let currentIndex = arr.length, randomIndex;
-    while (currentIndex > 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-        [arr[currentIndex], arr[randomIndex]] = [
-            arr[randomIndex], arr[currentIndex]];
+// const shuffleArray = (arr) => {
+//     // Shuffle
+//     let currentIndex = arr.length, randomIndex;
+//     while (currentIndex > 0) {
+//         randomIndex = Math.floor(Math.random() * currentIndex);
+//         currentIndex--;
+//         [arr[currentIndex], arr[randomIndex]] = [
+//             arr[randomIndex], arr[currentIndex]];
+//     }
+//     return arr;
+// }
+//
+//
+//
+//
+// console.log(shuffleArray(names));
+
+
+
+// const digitalRoot = (n) => {
+//     let numArr = n.toString().split('') ;
+//     let result;
+//
+//     while (numArr.length > 1){
+//         result = 0;
+//         for (let number of numArr){
+//             result += parseFloat(number);
+//         }
+//         numArr = result.toString().split('');
+//
+//     }
+//     result = parseFloat(numArr.join(""))
+//
+//
+//
+//
+//     return result
+// }
+
+const Pangram = (string) => {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+
+    for (let letter of alphabet){
+        if(!string.toLowerCase().includes(letter));
+        return false;
+
     }
-    return arr;
+
+
 }
 
 
 
 
-console.log(shuffleArray(names));
+
 
 
 

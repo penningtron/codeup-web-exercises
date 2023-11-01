@@ -16,6 +16,11 @@ ul{
 
 }
 
+footer.container{
+    flex-grow: 1;
+    justify-content: end;
+}
+
 @media screen and (min-width:750px) {
     .container  {
         flex-direction: row;
