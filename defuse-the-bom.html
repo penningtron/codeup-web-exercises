@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Defuse the BOM</title>
+</head>
+<body>
+
+<h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
+<button id="defuser">Defuse the BOM</button>
+
+<script>
+(function() {
+    "use strict";
+
+    var detonationTimer = 5;
+
+    // TODO: This function needs to be called once every second
+
+    // function explosion(){
+    //     <dotlottie-player src="https://lottie.host/d2a9e872-4b7c-4042-8868-bfa622d8ed3f/nBnztg3jh2.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+    // }
+
+    function updateTimer() {
+        if (detonationTimer == 0) {
+            alert('EXTERMINATE!');
+
+            document.body.innerHTML = '';
+
+
+
+
+
+        } else if (detonationTimer > 0) {
+            document.getElementById('timer').innerHTML = detonationTimer;
+        }
+
+        detonationTimer--;
+    }
+
+    let countDown = setInterval(updateTimer, 1000)
+
+
+    // TODO: When this function runs, it needs to
+    // cancel the interval/timeout for updateTimer()
+    function defuseTheBOM() {
+        clearInterval(countDown);
+
+    }
+
+    // Don't modify anything below this line!
+    //
+    // This causes the defuseTheBOM() function to be called
+    // when the "defuser" button is clicked.
+    // We will learn about events in the DOM lessons
+    var defuser = document.getElementById('defuser');
+
+
+    defuser.addEventListener('click', defuseTheBOM);
+
+
+
+})();
+
+</script>
+
+
+
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+
+
+</body>
+</html>
