@@ -15,6 +15,13 @@
     <li data-dbid="5">Item 5</li>
 </ul>
 <h2 id="sub-header">Hello Again.</h2>
+
+<button class = "makeCoolBtn">Make Cool</button>
+<button class = "makeBlueBtn">Make Blue</button>
+<button class = "makeGreyBtn">Make Grey</button>
+<button class = "makeLiBtn">Make Li Blue</button>
+<button class = "subTxChange">Mission Accomplished</button>
+
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -27,37 +34,57 @@
 <script>
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        const mainHeader = document.querySelector('#main-header');
-
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Coool"
+        const makeCoolBtn = document.querySelector('.makeCoolBtn')
+
+        makeCoolBtn.addEventListener('click', event => {
+
+            const mainHeader = document.querySelector('#main-header');
+            mainHeader.innerHTML = "JavaScript is Coool"
+        });
 
         // TODO: Uncomment the next line and get the sub header element by id
-        const subHeader = document.querySelector('#sub-header');
+        const makeBlueBtn = document.querySelector('.makeBlueBtn')
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue'
+        makeBlueBtn.addEventListener('click' , event => {
+            const subHeader = document.querySelector('#sub-header');
+            subHeader.style.color = 'blue'
 
-        // TODO: Uncomment the next line and get all list items
-        const listItems = document.querySelectorAll('li') ;
+        })
 
-        // TODO: Set text color on every other list item to grey
+        const makeGreyBtn = document.querySelector('.makeGreyBtn')
+        makeGreyBtn.addEventListener('click' , event => {
+            const listItems = document.querySelectorAll('li') ;
+            for (let i = 0; i < listItems.length; i=i+2){
+                listItems[i].style.color = "grey";
+            }
 
-        console.log(listItems)
+        })
 
-        for (let i = 0; i < listItems.length; i=i+2){
-            listItems[i].style.color = "grey";
-        }
         // TODO: Set text color of li with dbid = 1 to blue
 
-        let dbid = document.querySelector('li[data-dbid="1"]');
-        dbid.style.color = 'blue'
+        const makeLiblue = document.querySelector('.makeLiBtn')
+        makeLiblue.addEventListener('click' , event => {
+            let dbid = document.querySelector('li[data-dbid="1"]');
+            dbid.style.color = 'blue'
+        })
+
+        const subTxChange = document.querySelector('.subTxChange')
+        subTxChange.addEventListener('click' , event => {
+            const subParagraphs = document.querySelectorAll('.sub-paragraph');
+            subParagraphs[0].innerHTML = 'Mission Accomplished!';
+
+
+        })
+
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        const subParagraphs = document.querySelectorAll('.sub-paragraph');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = 'Mission Accomplished!';
+
+
+
 
 
 
