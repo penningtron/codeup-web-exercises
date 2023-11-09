@@ -8,11 +8,11 @@
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
-    <li data-dbid="1">Item 1</li>
-    <li data-dbid="2">Item 2</li>
-    <li data-dbid="3">Item 3</li>
-    <li data-dbid="4">Item 4</li>
-    <li data-dbid="5">Item 5</li>
+    <li data-dbid="1" class="list">Item 1</li>
+    <li data-dbid="2" class="list">Item 2</li>
+    <li data-dbid="3" class="list">Item 3</li>
+    <li data-dbid="4" class="list">Item 4</li>
+    <li data-dbid="5" class="list">Item 5</li>
 </ul>
 <h2 id="sub-header">Hello Again.</h2>
 
@@ -32,56 +32,78 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 <script>
+
+    document.querySelector('#main-header').addEventListener("click", event => {
+        document.querySelector('#main-header').style.backgroundColor= 'red';
+    })
+
+    document.querySelector('.sub-paragraph').addEventListener('dblclick', event => {
+        document.querySelector('.sub-paragraph').style.fontSize= 18 + "px";
+
+
+    })
+    document.querySelector('.list').addEventListener("mouseenter", event => {
+        document.querySelector('.list').style.color= 'red';
+    })
+
+
+
+
+
+
+
+
+
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        const makeCoolBtn = document.querySelector('.makeCoolBtn')
-
-        makeCoolBtn.addEventListener('click', event => {
-
-            const mainHeader = document.querySelector('#main-header');
-            mainHeader.innerHTML = "JavaScript is Coool"
-        });
-
-        // TODO: Uncomment the next line and get the sub header element by id
-        const makeBlueBtn = document.querySelector('.makeBlueBtn')
-
-        makeBlueBtn.addEventListener('click' , event => {
-            const subHeader = document.querySelector('#sub-header');
-            subHeader.style.color = 'blue'
-
-        })
-
-        const makeGreyBtn = document.querySelector('.makeGreyBtn')
-        makeGreyBtn.addEventListener('click' , event => {
-            const listItems = document.querySelectorAll('li') ;
-            for (let i = 0; i < listItems.length; i=i+2){
-                listItems[i].style.color = "grey";
-            }
-
-        })
-
-        // TODO: Set text color of li with dbid = 1 to blue
-
-        const makeLiblue = document.querySelector('.makeLiBtn')
-        makeLiblue.addEventListener('click' , event => {
-            let dbid = document.querySelector('li[data-dbid="1"]');
-            dbid.style.color = 'blue'
-        })
-
-        const subTxChange = document.querySelector('.subTxChange')
-        subTxChange.addEventListener('click' , event => {
-            const subParagraphs = document.querySelectorAll('.sub-paragraph');
-            subParagraphs[0].innerHTML = 'Mission Accomplished!';
-
-
-        })
-
-
-
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // // TODO: Uncomment next line and get the main header element by id
+        // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        // const makeCoolBtn = document.querySelector('.makeCoolBtn')
+        //
+        // makeCoolBtn.addEventListener('click', event => {
+        //
+        //     const mainHeader = document.querySelector('#main-header');
+        //     mainHeader.innerHTML = "JavaScript is Coool"
+        // });
+        //
+        // // TODO: Uncomment the next line and get the sub header element by id
+        // const makeBlueBtn = document.querySelector('.makeBlueBtn')
+        //
+        // makeBlueBtn.addEventListener('click' , event => {
+        //     const subHeader = document.querySelector('#sub-header');
+        //     subHeader.style.color = 'blue'
+        //
+        // })
+        //
+        // const makeGreyBtn = document.querySelector('.makeGreyBtn')
+        // makeGreyBtn.addEventListener('click' , event => {
+        //     const listItems = document.querySelectorAll('li') ;
+        //     for (let i = 0; i < listItems.length; i=i+2){
+        //         listItems[i].style.color = "grey";
+        //     }
+        //
+        // })
+        //
+        // // TODO: Set text color of li with dbid = 1 to blue
+        //
+        // const makeLiblue = document.querySelector('.makeLiBtn')
+        // makeLiblue.addEventListener('click' , event => {
+        //     let dbid = document.querySelector('li[data-dbid="1"]');
+        //     dbid.style.color = 'blue'
+        // })
+        //
+        // const subTxChange = document.querySelector('.subTxChange')
+        // subTxChange.addEventListener('click' , event => {
+        //     const subParagraphs = document.querySelectorAll('.sub-paragraph');
+        //     subParagraphs[0].innerHTML = 'Mission Accomplished!';
+        //
+        //
+        // })
+        //
+        //
+        //
+        // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        //
+        // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
 
 
 
