@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Konami Code</title>
+  <link rel="stylesheet" href="./css/konami-style.css">
+
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<div class="imageblock" style="height: 300px; width: 300px;">
+  <img src="">
+
+</div>
+<script>
+  "use strict";
+
+  let keyArr = [];
+  let codeArr = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+
+  const imgBlock = document.getElementById('.imageblock img');
+
+  document.addEventListener("keyup", event => {
+    keyArr.push(event.key);
+    console.log(keyArr);
+
+    if (keyArr.length < 11 ) {
+
+      keyArr.forEach((key, i) => {
+        if (keyArr[i] === codeArr[i]) {
+          console.log('true')
+
+        } else {
+          keyArr = [];
+        }
+      });
+    } else if (keyArr.length === 11) {
+      alert("You have 30 lives now!")
+
+      setInterval(() => {
+        const imgBlock = document.querySelector('.imageblock img');
+
+        imgBlock.setAttribute("src", "img/frame-1.png");
+        setTimeout(() => {
+          imgBlock.setAttribute("src", "img/frame-2.png");
+        },150);
+
+      }, 300);
+    }
+
+
+
+  });
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
