@@ -14,7 +14,9 @@ const lastCommitDate = async (username) => {
 
     return fetch(url, options)
         .then(response=>response.json())
-        .catch(error => console.log(error))
+        .catch(error => {
+            return error
+        });
 }
 
 
