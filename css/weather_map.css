@@ -8,7 +8,17 @@
 }
 
 p {
-    padding: 20px;
+    padding: 3px;
+    font-size: 15px;
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+
+.btn {
+    background-color: white;
 }
 
 #map {
@@ -25,4 +35,27 @@ p {
 
 .container .col * {
     pointer-events: all;
+}
+
+.card_container {
+    height: 18rem;
+
+
+}
+
+.card-body{
+    height: 100px;
+    margin: 15px;
+}
+
+.card {
+    width: 18rem;
+    background-color: steelblue;
+    padding: unset;
+    margin: 10px;
+
+}
+
+.hidden{
+    visibility: hidden ;
 }
