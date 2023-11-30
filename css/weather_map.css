@@ -6,21 +6,17 @@
     display: flex;
     flex-direction: column;
 }
-
 p {
     padding: 3px;
     font-size: 15px;
     color: white;
 }
-
 h4 {
     color: white;
 }
-
 .btn {
     background-color: white;
 }
-
 #map {
     position: fixed;
     top: 0;
@@ -28,34 +24,25 @@ h4 {
     width: 100%;
     height: 100%;
 }
-
 .container {
     pointer-events: none;
 }
-
 .container .col * {
     pointer-events: all;
 }
-
 .card_container {
     height: 18rem;
-
-
 }
-
 .card-body{
     height: 100px;
     margin: 15px;
 }
-
 .card {
     width: 18rem;
     background-color: steelblue;
     padding: unset;
     margin: 10px;
-
 }
-
 .hidden{
     visibility: hidden ;
 }

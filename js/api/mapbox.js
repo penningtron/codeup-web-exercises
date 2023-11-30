@@ -13,7 +13,6 @@ export const getCoordinates = async (searchText) => {
     const data = await response.json();
     return data.features[0].center;
 };
-
 export const getAddress = async (lng, lat) => {
     if (Array.isArray(lng)) {
         lat = lng[1];
